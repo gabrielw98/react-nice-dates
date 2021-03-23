@@ -10,6 +10,38 @@ $nice-dates-font-size-big: 16px !default;
 $nice-dates-cell-width: calc(100% / 7);
 
 .nice-dates {
+
+  .date-range {
+    display: flex;
+    justify-content: space-between;
+
+    .input {
+      width: 100%;
+    }
+
+    &_arrow {
+      flex-shrink: 0;
+      position: relative;
+      width: 36px;
+
+      &:before {
+        border-right: 2px solid $color-gray-light;
+        border-top: 2px solid $color-gray-light;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 18px;
+        left: 50%;
+        margin-left: -14px;
+        margin-top: -9px;
+        position: absolute;
+        top: 50%;
+        transform: rotate(45deg);
+        width: 18px;
+      }
+    }
+  }
+
   &-navigation {
     align-items: center;
     color: $nice-dates-color-gray-dark;
